@@ -1,0 +1,96 @@
+<div class="container-fluid">
+      <div class="card card-outline-primary">
+
+            <div class="panel-body">
+                  <div class="card-block">
+                        <form class="card-block">
+                              <div class="container-fluid">
+                                    <div class="row">
+                                          <div class="col-sm-6">
+                                                <div class="form-group" style=" margin-top: 20px;   ">
+                                                      <label for="id" style="    margin-left: 10px;   ">{{
+                                                            'ID'}}</label>
+                                                      <input style="  margin-left: 130px;  " class="form-control form-control-sm" type="text"
+                                                            (ngModel)="productElement.id" id="id" name="id" required
+                                                            autofocus />
+                                                </div>
+
+                                          </div>
+
+
+                                          <div class="col-sm-6">
+                                                <div class="form-group" style=" margin-top: 20px;   ">
+                                                      <label style="    margin-left: 10px;   " for="title">{{ 'TITEL'}}</label>
+                                                      <input style="  margin-left: 100px;  "  class="form-control form-control-sm" type="text"
+                                                            (ngModel)="productElement.title" id="title" name="title"
+                                                            required autofocus />
+                                                </div>
+
+                                          </div>
+
+
+
+                                    </div>
+                                    <div class="row">
+                                          <div class="col-sm-6">
+                                                <div class="form-group" style=" margin-top: 20px;   ">
+                                                      <label style="    margin-left: 10px;   " for="price">{{ 'PRICE' }}</label>
+                                                      <input style="  margin-left: 100px;  "  type="number" class="form-control form-control-sm"
+                                                            (ngModel)="productElement.price" id="price" name="price"
+                                                            required />
+
+                                                </div>
+                                          </div>
+
+
+
+                                          <div class="col-sm-6">
+                                                <div class="form-group" style=" margin-top: 20px;   ">
+                                                      <label style="    margin-left: 10px;   " for="category">{{ 'CATOGERY'}}</label>
+                                                      <input style="  margin-left: 60px;  "  class="form-control form-control-sm" type="text"
+                                                            (ngModel)="productElement.category" id="category"
+                                                            name="category" required autofocus />
+                                                </div>
+
+                                          </div>
+
+                                    </div>
+
+
+
+                                    <div class="row">
+                                          <div class="col-sm-3">
+                                                <div class="form-group" style=" margin-top: 20px;   ">
+                                                      <label style="    margin-left: 10px;   " for="description">{{ 'DESCRIPTION'}}</label>
+                                                      <input style="  margin-left: 40px;  "  type="text" class="form-control form-control-sm"
+                                                            (ngModel)="productElement.description" id="description"
+                                                            name="description" readonly />
+                                                </div>
+                                          </div>
+
+
+                                          <div class="col-sm-3">
+                                                <div class="form-group" style=" margin-top: 20px;   ">
+                                                      <label style="    margin-left: 10px;   " for="image">{{ 'IMAGE'}}</label>
+                                                      <input style="  margin-left: 90px;  " class="form-control form-control-sm" type="text"
+                                                            (ngModel)="productElement.image" id="image" name="image" />
+                                                </div>
+                                          </div>
+                                    </div>
+
+
+                                    <div  class="container-fluid"  style=" margin-top: 20px;   ">
+                                          <div style="  margin-left: 100px;  "  class="row">
+                                                <div class="col">
+                                                      <button color="primary" (clicked)="onClicked()"><i
+                                                                  class="fa fa-save fa-fw"></i>Save </button>
+
+                                                </div>
+                                          </div>
+                                    </div>
+                              </div>
+                        </form>
+                  </div>
+            </div>
+      </div>
+</div>

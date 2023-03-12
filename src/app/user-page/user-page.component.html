@@ -1,0 +1,66 @@
+<div class="title-tab-step">
+    {{'user-page works!'}}
+</div>
+
+<p></p>
+<!-- <div class="container-fluid ;dropdown" >
+    <mat-form-field>
+        <mat-label>Select your favorite Catogry</mat-label>
+        <mat-select [(ngModel)]="selectedCatogry">
+            <mat-option *ngFor="let category of catogryArr" [value]="category">
+                {{ category }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+</div> -->
+<div class="dropdown">
+    <select style=" width: 300px; " [(ngModel)]="selectedCatogry" (change)="onOptionSelected($event.target)">
+        <option *ngFor="let option of catogryArr" [value]="option">{{ option }}</option>
+    </select>
+</div>
+
+<p></p>
+<table class="mat-table" mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="id">
+        <th class="mat-header-cell" mat-header-cell *matHeaderCellDef mat-sort-header>Id. </th>
+        <td class="mat-cell" mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="title">
+        <th class="mat-header-cell" mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+        <td class="mat-cell" mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+        <th class="mat-header-cell" mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+        <td class="mat-cell" mat-cell *matCellDef="let element"> {{element.price}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="category">
+        <th class="mat-header-cell" mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
+        <td class="mat-cell" mat-cell *matCellDef="let element"> {{element.category}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="description">
+        <th class="mat-header-cell" mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+        <td class="mat-cell" mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="image">
+        <th class="mat-header-cell" mat-header-cell *matHeaderCellDef mat-sort-header> Image </th>
+        <td class="mat-cell" mat-cell *matCellDef="let element"><img class="images" [src]="element.image" style="
+            width: 45px;
+        " /> </td>
+    </ng-container>
+
+
+    <tr class="mat-header-row" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr class="mat-row" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+
+<mat-paginator class="paginator-container" [pageSizeOptions]="[5, 10, 25]" aria-label="Select page"
+    showFirstLastButtons></mat-paginator>

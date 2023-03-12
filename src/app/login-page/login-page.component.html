@@ -1,0 +1,45 @@
+<div [ngStyle]="{'background-image':'url(assets/images/background.jpg)',
+'background-repeat': 'no-repeat',
+'background-size': 'cover',
+'height': '585px'}">
+<div class="container-fluid" dir="ltr">
+    <div class="row">
+      <div class="col-lg-4 col-md-7 col-xs-12">
+        <div class="login-form" dir="ltr">
+          <div class="login-container center">
+            <div class="form-container loginFormboarder"
+              style="  margin-top: 150px; margin-left: 100px; margin-right: 100px;   ">
+              <h2>Login</h2>
+              <form class="login-form">
+
+                <div class="row m-0 mb-3">
+                  <mat-form-field class="form-field">
+                    <mat-label for="username">Username</mat-label>
+                    <input matInput type="text" id="username" [(ngModel)]="username" name="username">
+
+                  </mat-form-field>
+
+                </div>
+
+                <div class="row m-0 mb-3">
+                  <mat-form-field class="form-field">
+
+                    <mat-label for="password">Password</mat-label>
+                    <input matInput type="password" id="password" [(ngModel)]="password" name="password">
+                  </mat-form-field>
+
+                </div>
+                <div class="row m-0 mb-3">
+
+                  <button mat-raised-button color="primary" style=" margin-left: 80px;  margin-top: 50px;  "
+                    class="login-button" type="submit" (click)="login()">Login</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+@import '~@angular/material/theming'
+
++mat-core
+
+// Define styles for the table
+.mat-table
+  width: 100%
+  border-collapse: collapse
+  margin-bottom: 1rem
+//   background-color: lightblue
+  border: 1px solid #ddd
+//   background-color: mat-color($background, card)
+
+  // Define styles for the header cells
+  .mat-header-cell
+    padding: 12px 8px
+    text-align: left
+    font-size: 14px
+    font-weight: 500
+    line-height: 20px
+    border-bottom: 1px solid mat-color($divider, opacity-12)
+
+    // Define styles for the sort header icon
+    .mat-sort-header-arrow
+      font-size: 16px
+      margin-left: 4px
+
+  // Define styles for the data cells
+  .mat-cell
+    padding: 12px 8px
+    text-align: left
+    font-size: 14px
+    line-height: 20px
+    border-bottom: 1px solid mat-color($divider, opacity-12)
+
+  // Define styles for the even rows
+  .mat-row:nth-of-type(even)
+    background-color: mat-color($background, alternate)
+
+// Define styles for the paginator
+.mat-paginator
+  margin-top: 1rem
+
+.paginator-container
+  display: flex
+  justify-content: center
+
+  .title-tab-step
+    margin-top: 0
+    margin-bottom: 0 !important
+    padding: 0 11px !important
+    text-align: center
+
+    .dropdown
+      position: relative
+
+  .dropdown-toggle
+    display: inline-block
+    cursor: pointer
+
+  .dropdown-menu
+    position: absolute
+    top: 100%
+    left: 0
+    display: none
+
+  .dropdown-toggle.active + .dropdown-menu
+    display: block
