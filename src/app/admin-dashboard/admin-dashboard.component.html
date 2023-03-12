@@ -5,7 +5,8 @@
     <p></p>
     <button  class="btn btn-primary btn-lg"  color="accent" (click)="Addlick()" ><i class="fa-solid fa-plus"></i></button>
 </div>
-<table class="mat-table" mat-table [dataSource]="dataSource" matSort>
+  
+  <table style ="border-width: 1;"class="mat-table" mat-table [dataSource]="dataSource" matSort>
 
     <ng-container matColumnDef="id">
         <th class="mat-header-cell" mat-header-cell *matHeaderCellDef mat-sort-header>Id. </th>

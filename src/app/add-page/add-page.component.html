@@ -7,21 +7,22 @@
                               <div class="container-fluid">
                                     <div class="row">
                                           <div class="col-sm-6">
-                                                <div class="form-group" style=" margin-top: 20px;   ">
-                                                      <label for="id" style="    margin-left: 10px;   ">{{
+                                                <div class="form-group">
+                                                      <label for="id">{{
                                                             'ID'}}</label>
-                                                      <input style="  margin-left: 130px;  " class="form-control form-control-sm" type="text"
+                                                      <input class="form-control form-control-sm" type="text"
                                                             (ngModel)="productElement.id" id="id" name="id" required
                                                             autofocus />
                                                 </div>
 
                                           </div>
 
-
+                                    </div>
+                                    <div style=" margin-top: 20px;   " class="row">
                                           <div class="col-sm-6">
-                                                <div class="form-group" style=" margin-top: 20px;   ">
-                                                      <label style="    margin-left: 10px;   " for="title">{{ 'TITEL'}}</label>
-                                                      <input style="  margin-left: 100px;  "  class="form-control form-control-sm" type="text"
+                                                <div class="form-group">
+                                                      <label for="title">{{ 'TITEL'}}</label>
+                                                      <input class="form-control form-control-sm" type="text"
                                                             (ngModel)="productElement.title" id="title" name="title"
                                                             required autofocus />
                                                 </div>
@@ -31,11 +32,11 @@
 
 
                                     </div>
-                                    <div class="row">
+                                    <div style=" margin-top: 20px;   "  class="row">
                                           <div class="col-sm-6">
-                                                <div class="form-group" style=" margin-top: 20px;   ">
-                                                      <label style="    margin-left: 10px;   " for="price">{{ 'PRICE' }}</label>
-                                                      <input style="  margin-left: 100px;  "  type="number" class="form-control form-control-sm"
+                                                <div class="form-group">
+                                                      <label for="price">{{ 'PRICE' }}</label>
+                                                      <input type="number" class="form-control form-control-sm"
                                                             (ngModel)="productElement.price" id="price" name="price"
                                                             required />
 
@@ -43,11 +44,12 @@
                                           </div>
 
 
-
+                                    </div>
+                                    <div style=" margin-top: 20px;   "  class="row">
                                           <div class="col-sm-6">
-                                                <div class="form-group" style=" margin-top: 20px;   ">
-                                                      <label style="    margin-left: 10px;   " for="category">{{ 'CATOGERY'}}</label>
-                                                      <input style="  margin-left: 60px;  "  class="form-control form-control-sm" type="text"
+                                                <div class="form-group">
+                                                      <label for="category">{{ 'CATOGERY'}}</label>
+                                                      <input class="form-control form-control-sm" type="text"
                                                             (ngModel)="productElement.category" id="category"
                                                             name="category" required autofocus />
                                                 </div>
@@ -58,29 +60,33 @@
 
 
 
-                                    <div class="row">
-                                          <div class="col-sm-3">
-                                                <div class="form-group" style=" margin-top: 20px;   ">
-                                                      <label style="    margin-left: 10px;   " for="description">{{ 'DESCRIPTION'}}</label>
-                                                      <input style="  margin-left: 40px;  "  type="text" class="form-control form-control-sm"
+                                    <div style=" margin-top: 20px;   "  class="row">
+                                          <div class="col-sm-6">
+                                                <div class="form-group">
+                                                      <label for="description">{{ 'DESCRIPTION'}}</label>
+                                                     
+                                                     
+                                                      <input type="text" class="form-control form-control-sm"
                                                             (ngModel)="productElement.description" id="description"
-                                                            name="description" readonly />
+                                                            name="description" required autofocus />
                                                 </div>
                                           </div>
 
-
-                                          <div class="col-sm-3">
-                                                <div class="form-group" style=" margin-top: 20px;   ">
-                                                      <label style="    margin-left: 10px;   " for="image">{{ 'IMAGE'}}</label>
-                                                      <input style="  margin-left: 90px;  " class="form-control form-control-sm" type="text"
-                                                            (ngModel)="productElement.image" id="image" name="image" />
+                                    </div>
+                                    <div style=" margin-top: 20px;   "  class="row">
+                                          <div class="col-sm-6">
+                                                <div class="form-group">
+                                                      <label for="image">{{ 'IMAGE'}}</label>
+                                                      <input class="form-control form-control-sm" type="text"
+                                                            (ngModel)="productElement.image" id="image"
+                                                             name="image"  required autofocus/>
                                                 </div>
                                           </div>
                                     </div>
 
 
-                                    <div  class="container-fluid"  style=" margin-top: 20px;   ">
-                                          <div style="  margin-left: 100px;  "  class="row">
+                                    <div style=" margin-top: 20px; margin-left: 200px; "  class="container-fluid">
+                                          <div class="row">
                                                 <div class="col">
                                                       <button color="primary" (clicked)="onClicked()"><i
                                                                   class="fa fa-save fa-fw"></i>Save </button>
